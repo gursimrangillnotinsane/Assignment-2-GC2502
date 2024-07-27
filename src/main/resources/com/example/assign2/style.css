@@ -1,0 +1,13 @@
+.button{
+    -fx-background-color: #a98c77;
+    -fx-min-height: 20;
+}
+
+.paneIndividual{
+    -fx-pref-height: 100;
+    -fx-pref-width: 100;
+}
+
+.mainpane{
+    -fx-background-color: #000;
+}
