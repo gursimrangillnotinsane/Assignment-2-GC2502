@@ -8,10 +8,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+    public static Stage parentWindow;
     @Override
     public void start(Stage stage) throws IOException {
+        parentWindow = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 650);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();

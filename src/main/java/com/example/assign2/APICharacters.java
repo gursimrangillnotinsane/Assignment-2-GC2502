@@ -3,9 +3,7 @@ import com.google.gson.Gson;
 
 public class APICharacters extends APIUtility{
 
-    public CharacterList getAllCHaracters(){
-
-        String uri = "https://rickandmortyapi.com/api/character";
+    public CharacterList getAllCHaracters(String uri){
         Gson gson = new Gson();
         String response = sendRequest(uri);
         return gson.fromJson(response, CharacterList.class);

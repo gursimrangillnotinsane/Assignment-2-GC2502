@@ -1,13 +1,30 @@
 .button{
-    -fx-background-color: #a98c77;
+    -fx-background-color: #6e5b4d;
     -fx-min-height: 20;
 }
 
 .paneIndividual{
     -fx-pref-height: 100;
-    -fx-pref-width: 100;
+    -fx-pref-width: 290;
+    -fx-background-color: #3c3e43;
 }
 
+.image{
+    -fx-fit-width: 50;
+    -fx-fit-height: 50;
+}
+.heading{
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(164, 154, 154, 0.88);
+}
+
+.heading:hover{
+    -fx-text-fill: rgb(246, 246, 246);
+}
+
+.labelAlive{}
+
 .mainpane{
-    -fx-background-color: #000;
+    -fx-background-color: #272b33;
 }

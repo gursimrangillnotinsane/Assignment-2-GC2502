@@ -7,6 +7,7 @@ public class CharacterList {
 
     public ArrayList<Character> results;
 
+    public CharacterAllInfo info;
 
 }
 
