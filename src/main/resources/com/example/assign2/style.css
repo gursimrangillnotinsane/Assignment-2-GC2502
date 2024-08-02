@@ -1,7 +1,21 @@
-.button{
-    -fx-background-color: #6e5b4d;
+.button {
+    -fx-background-color: #2a4c52;
     -fx-min-height: 20;
+    -fx-text-fill: rgba(225, 213, 213, 0.88);
+    -fx-layout-x: 547px; /* X position */
+    -fx-layout-y: 33px; /* Y position */
 }
+.button:hover{
+    -fx-background-color: #3a71e7;
+}
+
+
+.mainHeading{
+    -fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #6292c9 0.0%, #d99cd5 100.0%);
+    -fx-font-size: 30;
+}
+
+
 
 .paneIndividual{
     -fx-pref-height: 100;
@@ -16,15 +30,21 @@
 .heading{
     -fx-font-size: 21px;
     -fx-font-weight: bold;
-    -fx-text-fill: rgba(164, 154, 154, 0.88);
+    -fx-text-fill: rgb(188, 200, 206);
 }
 
 .heading:hover{
     -fx-text-fill: rgb(246, 246, 246);
 }
 
-.labelAlive{}
+.labelAlive{
+    -fx-text-fill: rgba(188, 193, 211, 0.88);
+}
 
 .mainpane{
     -fx-background-color: #272b33;
+}
+
+.vbox{
+    -fx-padding: 10px;
 }

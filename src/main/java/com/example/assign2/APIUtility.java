@@ -5,8 +5,16 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+/**
+ * The inner working of the api
+ */
 public class APIUtility {
 
+    /**
+     * sends request to the given url and returns the data
+     * @param uri of the api
+     * @return json
+     */
     String sendRequest(String uri){
         String json = "";
 

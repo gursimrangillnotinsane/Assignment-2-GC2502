@@ -14,73 +14,61 @@ import java.util.jar.Attributes;
 
 import javafx.scene.image.ImageView;
 
+/*
+* Controller-class for the single character scene
+* */
+
 public class CharacterController {
     @FXML
-    private Text GenderChar;
+    private Text genderChar;
 
     @FXML
-    private ImageView ImageChar;
+    private ImageView imageChar;
 
     @FXML
-    private Text LocationChar;
+    private Text locationChar;
 
     @FXML
-    private Text NameChar;
+    private Text nameChar;
 
     @FXML
-    private Text SpeciesChar;
+    private Text speciesChar;
 
     @FXML
-    private Text StatusChar;
+    private Text statusChar;
 
     private Character character;
+
+    /**
+     * To go back to the main view
+     */
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
         Parent scene1Root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
         Scene scene1 = new Scene(scene1Root);
         Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        stage.getIcons().add(new Image(getClass().getResource("Images/mainIcon.png").toString()));
+        stage.setTitle("Rick And Morty Characters");
         stage.setScene(scene1);
     }
 
 
-
-//    @FXML
-//    protected void initialize() {
-//        // Initialization logic that does not depend on external data can go here.
-//        // For example:
-//        if (name != null) {
-//            // Ensure the character is set before trying to access it
-//            System.out.println(character.name);
-//            name.setText(character.name);
-//            if (CharImage != null) {
-//                Image image = new Image(character.url); // Ensure `character.imageUrl` is a valid path
-//                CharImage.setImage(image);
-//            }
-//        }
-//    }
-
+    /**
+     * Gets the info about a single character and populates the scene
+     * @param id of the character
+     */
     public void setData(String id) {
         // Fetch the character data and update UI
         APICharacters api = new APICharacters();
         this.character = api.getOneCharacter(id);
 
-        NameChar.setText(character.name);
-        Image image=new Image(character.image);
-        ImageChar.setImage(image);
-        SpeciesChar.setText(character.species);
-        CharacterLocation location=character.location;
-        LocationChar.setText(location.name);
-        StatusChar.setText(character.status);
-        GenderChar.setText(character.gender);
-//        if (character != null) {
-//            // Update UI components
-//            NameChar.setText(character.name);
-//            if (ImageChar != null) {
-//                Image image = new Image(character.image); // Ensure `character.imageUrl` is a valid path
-//                ImageChar.setImage(image);
-//            }
-//        } else {
-//            System.out.println("Character data is null for ID: " + id);
-//        }
+        nameChar.setText(character.getName());
+        Image image=new Image(character.getImage());
+        imageChar.setImage(image);
+        speciesChar.setText(character.getSpecies());
+        CharacterLocation location=character.getLocation();
+        locationChar.setText(location.getName());
+        statusChar.setText(character.getStatus());
+        genderChar.setText(character.getGender());
     }
 }
