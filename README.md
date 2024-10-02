@@ -7,4 +7,5 @@ Home page
 ![Screenshot 2024-10-02 153538](https://github.com/user-attachments/assets/41a5f986-3168-46c9-a802-0b065c456517)
 
 Character page
+
 ![Screenshot 2024-10-02 153554](https://github.com/user-attachments/assets/e106ae2f-bf3b-49dc-9a54-3a890d3c98b2)
